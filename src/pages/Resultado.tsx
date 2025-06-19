@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Clock, Users, Award } from 'lucide-react';
+import { CheckCircle, Clock, Users, Award, Gift } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Resultado = () => {
@@ -117,32 +118,71 @@ const Resultado = () => {
             </CardContent>
           </Card>
 
-          {/* Oferta Irresistível */}
+          {/* Bônus de Ação Rápida */}
           <Card className="bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-2xl">
-            <CardContent className="p-8 text-center">
-              <h2 className="text-3xl font-bold mb-4">
-                Oferta Especial do Diagnóstico
-              </h2>
-              <p className="text-xl mb-6 opacity-90">
-                Normalmente vendido por R$67, seu acesso completo está disponível hoje por apenas:
-              </p>
-              
-              <div className="bg-white text-gray-800 rounded-lg p-6 mb-8 inline-block">
-                <div className="text-5xl font-bold text-green-600 mb-2">R$27,90</div>
-                <p className="text-sm text-gray-600">Pagamento Único via PIX ou Cartão</p>
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold text-lg mb-6">
+                  <Gift className="w-6 h-6 mr-2" />
+                  BÔNUS DE AÇÃO RÁPIDA (Presente Exclusivo do Diagnóstico)
+                </div>
+                
+                {/* Voucher Visual */}
+                <div className="bg-white text-gray-800 rounded-2xl p-8 mb-8 shadow-2xl mx-auto max-w-md">
+                  <div className="border-2 border-dashed border-orange-400 rounded-lg p-6">
+                    <div className="text-center">
+                      <Gift className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+                      <h3 className="text-2xl font-bold text-orange-600 mb-2">
+                        Voucher VIP da Loja
+                      </h3>
+                      <h3 className="text-2xl font-bold text-orange-600 mb-4">
+                        Arteirinhos.com
+                      </h3>
+                      <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold text-lg">
+                        Economia Mínima Garantida: R$38,40
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-left bg-white/10 rounded-lg p-6 mb-8">
+                  <p className="text-xl mb-4 font-semibold">
+                    "Isso não é um sorteio. É um presente pela sua dedicação.
+                  </p>
+                  <p className="text-lg mb-4">
+                    Ao garantir seu Arsenal de Atividades AGORA, você destrava também um Voucher VIP de 48% de desconto na sua primeira compra na loja Arteirinhos.com.
+                  </p>
+                  <p className="text-lg mb-4">
+                    Vamos ser diretos: o produto mais barato deles custa R$80. Com seu voucher, você já economiza R$38,40 na hora.
+                  </p>
+                  <p className="text-lg font-semibold">
+                    Sim, você leu certo. Só o valor deste bônus já paga o seu investimento no Arsenal hoje e ainda sobra dinheiro. É a nossa forma de garantir que sua decisão seja 100% inteligente."
+                  </p>
+                </div>
               </div>
+              
+              <div className="text-center">
+                <p className="text-xl mb-6 opacity-90">
+                  Normalmente vendido por R$67, seu acesso completo está disponível hoje por apenas:
+                </p>
+                
+                <div className="bg-white text-gray-800 rounded-lg p-6 mb-8 inline-block">
+                  <div className="text-5xl font-bold text-green-600 mb-2">R$27,90</div>
+                  <p className="text-sm text-gray-600">Pagamento Único via PIX ou Cartão</p>
+                </div>
 
-              <Button
-                onClick={handleBuyNow}
-                size="lg"
-                className="w-full max-w-md py-6 text-2xl font-bold bg-yellow-400 hover:bg-yellow-500 text-gray-800 transform hover:scale-105 transition-all duration-200 shadow-lg"
-              >
-                🚀 LIBERAR MEU PLANO POR R$27,90
-              </Button>
+                <Button
+                  onClick={handleBuyNow}
+                  size="lg"
+                  className="w-full max-w-md py-6 text-2xl font-bold bg-yellow-400 hover:bg-yellow-500 text-gray-800 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                >
+                  🚀 LIBERAR MEU PLANO POR R$27,90
+                </Button>
 
-              <p className="text-sm mt-4 opacity-80">
-                ⚡ Acesso instantâneo • 💳 Pagamento 100% seguro • 🎯 Garantia de 7 dias
-              </p>
+                <p className="text-sm mt-4 opacity-80">
+                  ⚡ Acesso instantâneo • 💳 Pagamento 100% seguro • 🎯 Garantia de 7 dias
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
