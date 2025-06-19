@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -125,14 +124,11 @@ const Resultado = () => {
                 Oferta Especial do Diagnóstico
               </h2>
               <p className="text-xl mb-6 opacity-90">
-                Este plano de ação completo, normalmente vendido por 
-                <span className="line-through ml-2 mr-2">R$97</span>
-                está disponível como parte do seu diagnóstico personalizado.
+                Normalmente vendido por R$67, seu acesso completo está disponível hoje por apenas:
               </p>
               
               <div className="bg-white text-gray-800 rounded-lg p-6 mb-8 inline-block">
-                <p className="text-lg mb-2">Acesso Imediato por apenas</p>
-                <div className="text-5xl font-bold text-green-600 mb-2">R$24,90</div>
+                <div className="text-5xl font-bold text-green-600 mb-2">R$27,90</div>
                 <p className="text-sm text-gray-600">Pagamento Único via PIX ou Cartão</p>
               </div>
 
@@ -141,7 +137,7 @@ const Resultado = () => {
                 size="lg"
                 className="w-full max-w-md py-6 text-2xl font-bold bg-yellow-400 hover:bg-yellow-500 text-gray-800 transform hover:scale-105 transition-all duration-200 shadow-lg"
               >
-                🚀 LIBERAR MEU PLANO POR R$24,90
+                🚀 LIBERAR MEU PLANO POR R$27,90
               </Button>
 
               <p className="text-sm mt-4 opacity-80">
