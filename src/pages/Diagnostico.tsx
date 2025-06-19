@@ -2,7 +2,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Diagnostico = () => {
@@ -32,8 +31,12 @@ const Diagnostico = () => {
           <Card className="max-w-2xl mx-auto shadow-2xl border-0 mb-8">
             <CardContent className="p-8">
               <div className="mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/42c171ce-fa4d-43d7-82b7-39bfac56dddf.png" 
+                    alt="Mascote educativo" 
+                    className="w-16 h-16 object-contain"
+                  />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
                   Diagnóstico Gratuito Personalizado
