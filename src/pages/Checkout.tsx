@@ -9,6 +9,14 @@ import { CreditCard, Smartphone, Shield, Clock } from 'lucide-react';
 const Checkout = () => {
   const [paymentMethod, setPaymentMethod] = useState<'pix' | 'card'>('pix');
 
+  const handleCheckout = () => {
+    // SUBSTITUA A URL ABAIXO PELO SEU LINK DE CHECKOUT REAL
+    const checkoutUrl = 'SEU_LINK_DE_CHECKOUT_AQUI';
+    
+    // Abre o checkout em uma nova aba
+    window.open(checkoutUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-8">
       <div className="container mx-auto px-4">
@@ -136,6 +144,7 @@ const Checkout = () => {
                 )}
 
                 <Button
+                  onClick={handleCheckout}
                   size="lg"
                   className="w-full py-4 text-xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700"
                 >
