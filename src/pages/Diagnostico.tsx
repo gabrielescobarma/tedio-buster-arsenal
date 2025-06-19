@@ -1,18 +1,13 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
-
 const Diagnostico = () => {
   const navigate = useNavigate();
-
   const handleStartQuiz = () => {
     navigate('/quiz');
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  return <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header Principal */}
@@ -31,13 +26,7 @@ const Diagnostico = () => {
           <Card className="max-w-2xl mx-auto shadow-2xl border-0 mb-8">
             <CardContent className="p-8">
               <div className="mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/42c171ce-fa4d-43d7-82b7-39bfac56dddf.png" 
-                    alt="Mascote educativo" 
-                    className="w-16 h-16 object-contain"
-                  />
-                </div>
+                
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
                   Diagnóstico Gratuito Personalizado
                 </h2>
@@ -48,23 +37,12 @@ const Diagnostico = () => {
               </div>
 
               <div className="space-y-4 mb-8 text-left">
-                {[
-                  "✅ Análise personalizada do seu perfil familiar",
-                  "✅ Recomendações específicas para sua situação",
-                  "✅ Plano de ação imediato e prático",
-                  "✅ Acesso a estratégias comprovadas"
-                ].map((benefit, index) => (
-                  <div key={index} className="flex items-center text-gray-700">
+                {["✅ Análise personalizada do seu perfil familiar", "✅ Recomendações específicas para sua situação", "✅ Plano de ação imediato e prático", "✅ Acesso a estratégias comprovadas"].map((benefit, index) => <div key={index} className="flex items-center text-gray-700">
                     <span className="text-lg">{benefit}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
-              <Button
-                onClick={handleStartQuiz}
-                size="lg"
-                className="w-full py-4 text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
-              >
+              <Button onClick={handleStartQuiz} size="lg" className="w-full py-4 text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-200 shadow-lg">
                 🚀 COMEÇAR DIAGNÓSTICO GRATUITO
               </Button>
 
@@ -80,16 +58,12 @@ const Diagnostico = () => {
               <strong>Mais de 2.847 famílias</strong> já transformaram sua rotina
             </p>
             <div className="flex justify-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-yellow-400 text-2xl">⭐</span>
-              ))}
+              {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-2xl">⭐</span>)}
               <span className="ml-2 text-gray-600 font-semibold">4.9/5 (1.234 avaliações)</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Diagnostico;
