@@ -1,14 +1,19 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Clock, Users, Award, Gift } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+
 const Resultado = () => {
   const navigate = useNavigate();
+
   const handleBuyNow = () => {
     navigate('/checkout');
   };
-  return <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           {/* Header de Diagnóstico */}
@@ -31,12 +36,18 @@ const Resultado = () => {
                 Suas respostas indicam que seus maiores desafios são:
               </h2>
               <div className="space-y-4">
-                {["A luta diária contra o tédio e o excesso de telas", "A falta de tempo e energia para preparar atividades complexas", "A preocupação em oferecer um desenvolvimento de qualidade para seu filho"].map((challenge, index) => <div key={index} className="flex items-start">
+                {[
+                  "A luta diária contra o tédio e o excesso de telas",
+                  "A falta de tempo e energia para preparar atividades complexas",
+                  "A preocupação em oferecer um desenvolvimento de qualidade para seu filho"
+                ].map((challenge, index) => (
+                  <div key={index} className="flex items-start">
                     <div className="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">
                       ✓
                     </div>
                     <p className="text-red-800 font-medium text-lg">{challenge}</p>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
@@ -80,23 +91,29 @@ const Resultado = () => {
 
               {/* Benefícios */}
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                {[{
-                icon: Clock,
-                title: "Economia de Tempo",
-                description: "Chega de pesquisar. Tenha um cardápio de atividades 'pegue e faça' sempre à mão."
-              }, {
-                icon: Users,
-                title: "Menos Telas, Mais Conexão",
-                description: "Atividades criadas por especialistas para engajar, divertir e fortalecer o vínculo familiar."
-              }, {
-                icon: Award,
-                title: "Desenvolvimento Acelerado",
-                description: "Brincadeiras que estimulam a coordenação motora, o raciocínio lógico e a criatividade."
-              }].map((benefit, index) => <div key={index} className="text-center p-6 bg-blue-50 rounded-lg">
+                {[
+                  {
+                    icon: Clock,
+                    title: "Economia de Tempo",
+                    description: "Chega de pesquisar. Tenha um cardápio de atividades 'pegue e faça' sempre à mão."
+                  },
+                  {
+                    icon: Users,
+                    title: "Menos Telas, Mais Conexão",
+                    description: "Atividades criadas por especialistas para engajar, divertir e fortalecer o vínculo familiar."
+                  },
+                  {
+                    icon: Award,
+                    title: "Desenvolvimento Acelerado",
+                    description: "Brincadeiras que estimulam a coordenação motora, o raciocínio lógico e a criatividade."
+                  }
+                ].map((benefit, index) => (
+                  <div key={index} className="text-center p-6 bg-blue-50 rounded-lg">
                     <benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                     <h4 className="font-bold text-lg mb-3 text-gray-800">{benefit.title}</h4>
                     <p className="text-gray-600">{benefit.description}</p>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
@@ -154,7 +171,13 @@ const Resultado = () => {
                   <p className="text-sm text-gray-600">Pagamento Único via PIX ou Cartão</p>
                 </div>
 
-                <Button onClick={handleBuyNow} size="lg" className="https://checkout.vendeagora.com/api/public/shopify?product=649611726456&store=6496">LIBERAR MEU PLANO POR R$27,90</Button>
+                <Button
+                  onClick={handleBuyNow}
+                  size="lg"
+                  className="w-full max-w-md py-6 text-2xl font-bold bg-yellow-400 hover:bg-yellow-500 text-gray-800 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                >
+                  🚀 LIBERAR MEU PLANO POR R$27,90
+                </Button>
 
                 <p className="text-sm mt-4 opacity-80">
                   ⚡ Acesso instantâneo • 💳 Pagamento 100% seguro • 🎯 Garantia de 7 dias
@@ -164,6 +187,8 @@ const Resultado = () => {
           </Card>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Resultado;
